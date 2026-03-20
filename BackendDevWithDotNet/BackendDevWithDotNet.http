@@ -1,0 +1,21 @@
+@BackendDevWithDotNet_HostAddress = http://localhost:5084
+@ApiKey = class-demo-api-key
+
+GET {{BackendDevWithDotNet_HostAddress}}/api/users
+X-Api-Key: {{ApiKey}}
+Accept: application/json
+
+###
+
+POST {{BackendDevWithDotNet_HostAddress}}/api/users
+X-Api-Key: {{ApiKey}}
+Content-Type: application/json
+
+{
+	"firstName": "Grace",
+	"lastName": "Hopper",
+	"email": "grace@example.com",
+	"age": 30
+}
+
+###
